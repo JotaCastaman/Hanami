@@ -1,0 +1,90 @@
+{
+    "margin-top": 6,
+    "margin-left": 5,
+    "margin-right": 5,
+    "height": 28,
+
+    "modules-left": ["custom/void", "hyprland/workspaces", "custom/cava", "custom/mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/power", "tray"],
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            },
+        "icon-size": 50,
+        "sort-by-number": true,
+        "active-only": true
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5
+    },
+     "clock": {
+        "format": "  {:%I:%M %p  %A %b %d}",
+        "tooltip": true,	  
+    },	
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+            },
+        "on-click": "pavucontrol"
+    },
+	  "cpu": {
+		    "format": "  {usage}%",
+	      "on-click": "kitty -e btop"
+	  },
+    "memory": {
+        "interval": 5,
+        "format": "  {used}GiB / {total}GiB ({percentage}%)",
+        "on-click": "kitty -e btop"
+    },
+	  "custom/language": {
+	      "exec": "/home/jotacastaman/.config/waybar/scripts/language.sh",
+        "tail": true
+    },
+	  "custom/ethernet": {
+	      "exec": "/home/jotacastaman/.config/waybar/scripts/ethernet.sh",
+	      "interval": 2,
+	      "return-type": "text"
+    },
+	  "custom/power": {
+	 	    "format": "⏻ ",
+        "icon-size": 15,
+	 	    "on-click": "nwg-bar" 
+    },
+    "custom/cava": {
+    	  "format": "{}",
+    	  "exec": "/home/jotacastaman/.config/waybar/scripts/cava.sh",
+    	  "trail": true
+    },
+    "custom/mpris": {
+        "exec": "/home/jotacastaman/.config/waybar/scripts/mpris-scroll.sh",
+        "return-type": "json",
+        "tail": true,
+        "on-click": "playerctl --player=spotify play-pause"
+    },
+    "custom/void": {
+        "format": " ",
+        "icon-size": 15
+    }
+}    

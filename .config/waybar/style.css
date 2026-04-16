@@ -1,0 +1,84 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
+    color: #ccc2bd;
+    padding: 1;
+}
+window#waybar {
+    background: rgba(59, 51, 47, 1);
+    opacity: 0.9;
+}
+/*MODULES*/
+.modules-right {
+    margin: 1px 10px 0 0;
+}
+.modules-center {
+    margin: 1px 0 0 0;
+    padding: 1px 10 2 10;
+}
+.modules-left {
+    margin: 1px 0 0 10px;
+}
+/*MODULES IND*/
+#workspaces button {
+    padding: 0px 6px 0px 6px;
+    background-color: rgba(81, 81, 79, 1);
+}
+#workspaces button.active {
+	background-color: rgba(128, 119, 114, 1);
+  color: #5b5956;
+  margin-top: -8px;
+  margin-bottom: -8px;
+	font-weight: bold;
+}
+
+#clock {
+  font-weight: bold;
+}
+#cpu {
+  font-weight: bold;
+  padding: 0 12 0 0;
+}
+#memory {
+  font-weight: bold;
+  padding: 0 12 0 0;
+}
+#temperature,
+#pulseaudio {
+	padding: 0 12 0 12;
+  font-weight: bold;
+}
+#custom-media,
+#tray,
+#mode,
+#custom-power {
+	font-weight: bold;
+  padding: 0 5px 0 2px;
+}
+#custom-cava {
+	padding: 0 0 0 10px;
+}
+#custom-ethernet {
+	padding: 0 2px 0 2px;
+}
+#mode {
+  color: #cc3436;
+  font-weight: bold;
+}
+#pulseaudio.muted {
+  color: #cc3436;
+}
+#custom-mpris {  
+  padding: 0 12px 0 12px;
+}
+#custom-mpris.stopped {
+  color: #888888;
+  opacity: 0.5;
+}
+#custom-language {
+  font-weight: bold;
+  padding: 0 2px 0 0;
+}
+#custom-void {
+  padding: 0 10px 0 0;
+}
