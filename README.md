@@ -6,8 +6,6 @@
 
 ---
 
-## 💻 System Components
-
 ## 💻 System
 
 | Category | Software |
