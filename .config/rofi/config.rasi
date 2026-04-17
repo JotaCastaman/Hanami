@@ -8,8 +8,8 @@
     b-radius: 10px;
     g-padding: 8px;
     hl-color: #3b332f;
-    hlt-color: rgba(204, 194, 189, 1);
-    alt-color: rgba(20, 20, 20, 1);
+    hlt-color: rgba(204, 194, 189, 0.5);
+    alt-color: rgba(20, 20, 20, 0.5);
     wbg-color: rgba(20, 20, 20, 0.5);
     w-border: 0px solid;
     w-border-color: #ccc2bd;
