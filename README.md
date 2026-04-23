@@ -19,7 +19,7 @@
 | Category | Software |
 |----------|----------|
 | Terminal | [Kitty](https://sw.kovidgoyal.net/kitty) |
-| Shell | Bash |
+| Shell | Fish |
 | Editor | [Neovim](https://neovim.io) / [Zed](https://zed.dev) |
 | File Manager | [Ranger](https://ranger.github.io) / [Nemo](https://github.com/linuxmint/nemo) |
 
