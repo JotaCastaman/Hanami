@@ -30,7 +30,7 @@
         },
         {
             "type": "packages",
-            "format": "{} (pacman)",
+            "format": "{} (xbps)",
             "key": " ",
             "keyColor": "33",  
         },
