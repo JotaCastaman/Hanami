@@ -1,30 +1,30 @@
 return {
-  -- add rose-pine
-  { "rose-pine/neovim", name = "rose-pine" },
+  { "sainnhe/gruvbox-material" },
 
-  -- Configure LazyVim to load rose-pine
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "gruvbox-material",
     },
   },
+
   {
-    "rose-pine/neovim",
-    opts = {
-      styles = { transparency = true },
-      palette = {
-        moon = {
-          base = "#191724",
-        },
-      },
-      highlight_groups = {
-        SnacksDashboardHeader = { fg = "#ccc2bd" },
-        SnacksDashboardDesc = { fg = "#ccc2bd" },
-        SnacksDashboardKey = { fg = "#ccc2bd" },
-        SnacksDashboardFooter = { fg = "#ccc2bd" },
-        SnacksDashboardIcon = { fg = "#ccc2bd" },
-      },
-    },
+    "sainnhe/gruvbox-material",
+    config = function()
+      vim.g.gruvbox_material_background = "soft"
+      vim.g.gruvbox_material_foreground = "material"
+      vim.g.gruvbox_material_transparent_background = 1
+
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "gruvbox-material",
+        callback = function()
+          vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#ccc2bd" })
+          vim.api.nvim_set_hl(0, "SnacksDashboardDesc", { fg = "#ccc2bd" })
+          vim.api.nvim_set_hl(0, "SnacksDashboardKey", { fg = "#ccc2bd" })
+          vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#ccc2bd" })
+          vim.api.nvim_set_hl(0, "SnacksDashboardIcon", { fg = "#ccc2bd" })
+        end,
+      })
+    end,
   },
 }
