@@ -4,15 +4,15 @@
     "margin-right": 5,
     "height": 28,
 
-    "modules-left": ["custom/void", "hyprland/workspaces", "custom/cava", "custom/mpris"],
+    "modules-left": ["custom/void", "sway/workspaces", "custom/cava", "custom/mpris"],
     "modules-center": ["clock"],
     "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/power", "tray"],
 
-    "sway/mode": {
+      "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
 
-    "hyprland/workspaces": {
+      "sway/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
@@ -29,17 +29,18 @@
             },
         "icon-size": 50,
         "sort-by-number": true,
-        "active-only": true
+        "current-only": true
     },
-    "tray": {
+      "tray": {
         "icon-size": 15,
         "spacing": 5
     },
-     "clock": {
+      "clock": {
         "format": "  {:%I:%M %p  %A %b %d}",
-        "tooltip": true,	  
+        "tooltip": true,
+        "on-click": "gnome-calendar"
     },	
-    "pulseaudio": {
+      "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-muted": "0% {icon} ",
         "format-source": "{volume}% ",
@@ -53,13 +54,13 @@
 		    "format": "  {usage}%",
 	      "on-click": "kitty -e btop"
 	  },
-    "memory": {
+      "memory": {
         "interval": 5,
         "format": "  {used}GiB / {total}GiB ({percentage}%)",
         "on-click": "kitty -e btop"
     },
 	  "custom/language": {
-	      "exec": "/home/jotacastaman/.config/waybar/scripts/language.sh",
+	    "exec": "/home/jotacastaman/.config/waybar/scripts/language.sh",
         "tail": true
     },
 	  "custom/ethernet": {
@@ -72,19 +73,20 @@
         "icon-size": 15,
 	 	    "on-click": "nwg-bar" 
     },
-    "custom/cava": {
+      "custom/cava": {
     	  "format": "{}",
     	  "exec": "/home/jotacastaman/.config/waybar/scripts/cava.sh",
     	  "trail": true
     },
-    "custom/mpris": {
+      "custom/mpris": {
         "exec": "/home/jotacastaman/.config/waybar/scripts/mpris-scroll.sh",
         "return-type": "json",
         "tail": true,
         "on-click": "playerctl --player=spotify play-pause"
     },
-    "custom/void": {
+      "custom/void": {
         "format": " ",
-        "icon-size": 15
+        "icon-size": 15,
+        "on-click": "pkill rofi || rofi -show drun"
     }
 }    

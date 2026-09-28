@@ -20,39 +20,35 @@ window#waybar {
 }
 /*MODULOS IND*/
 #workspaces button {
+    all: unset;
     padding: 0px 6px 0px 6px;
-    background-color: rgba(81, 81, 79, 1);
-}
-#workspaces button.active {
-	background-color: rgba(128, 119, 114, 1);
-  color: #5b5956;
-  margin-top: -8px;
-  margin-bottom: -8px;
-	font-weight: bold;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    background-color: rgba(129, 120, 115, 1);
 }
 
 #clock {
-  font-weight: bold;
+    font-weight: bold;
 }
 #cpu {
-  font-weight: bold;
-  padding: 0 12 0 0;
+    font-weight: bold;
+    padding: 0 12 0 0;
 }
 #memory {
-  font-weight: bold;
-  padding: 0 12 0 0;
+    font-weight: bold;
+    padding: 0 12 0 0;
 }
 #temperature,
 #pulseaudio {
 	padding: 0 12 0 12;
-  font-weight: bold;
+    font-weight: bold;
 }
 #custom-media,
 #tray,
 #mode,
 #custom-power {
 	font-weight: bold;
-  padding: 0 5px 0 2px;
+    padding: 0 5px 0 2px;
 }
 #custom-cava {
 	padding: 0 0 0 10px;
