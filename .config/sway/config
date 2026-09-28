@@ -1,0 +1,195 @@
+################
+### MONITORS ###
+################
+
+workspace 1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+
+###################
+### MY PROGRAMS ###
+###################
+
+set $mod Mod4
+set $term kitty
+set $fileManager ranger
+
+#################
+### AUTOSTART ###
+#################
+
+exec nm-applet &
+exec pipewire &
+exec waybar &
+exec autotiling
+exec ~/.config/sway/scripts/idle.sh
+exec swww-daemon && swww img ~/Pictures/Wallpaper/05 --transition-type none
+
+# OTHERS
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway XDG_SESSION_TYPE=wayland
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+exec /usr/libexec/xdg-desktop-portal-wlr
+exec dbus-update-activation-environment --all
+
+#############################
+### ENVIRONMENT VARIABLES ###
+#############################
+
+seat seat0 xcursor_theme default 18
+
+#####################
+### LOOK AND FEEL ###
+#####################
+
+gaps inner 5
+gaps outer 5
+
+
+default_border pixel 0
+default_floating_border pixel 0
+
+client.focused   #fdfafb #1c1b20 #fdfafb #fdfafb #fdfafb
+client.unfocused #1c1b20 #1c1b20 #fdfafb #1c1b20 #1c1b20
+
+blur enable
+blur_xray disable
+blur_passes 2
+blur_radius 5
+
+#############
+### INPUT ###
+#############
+
+input "type:keyboard" {
+    xkb_layout us,br
+    xkb_variant ,abnt2
+    xkb_options grp:alt_shift_toggle
+}
+
+input "type:touchpad" {
+    natural_scroll disabled
+}
+
+focus_follows_mouse yes
+
+###################
+### KEYBINDINGS ###
+###################
+
+# Main Binds
+bindsym $mod+Return exec $term
+bindsym Mod1+F4 kill
+bindsym $mod+l exit
+bindsym $mod+e exec kitty -e ranger
+bindsym $mod+v floating toggle
+bindsym $mod+r exec rofi -show drun
+bindsym $mod+j layout toggle split
+bindsym $mod+s exec zzz
+
+# Move focus with mod + arrow keys
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+# Switch workspaces with mod + [0-9]
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# Firefox
+bindsym $mod+f exec firefox
+
+# Waybar exec/killall
+bindsym $mod+Escape exec killall waybar || waybar
+
+# Screenshot
+bindsym Print exec grim -g "$(slurp)" - | wl-copy
+
+# Fullscreen
+bindsym $mod+i fullscreen
+
+# Wallpaper change
+bindsym $mod+w exec ~/.config/sway/scripts/wallpaper.sh
+
+# neovim
+bindsym $mod+n exec kitty nvim
+
+# Move active window to a workspace with mod + SHIFT + [0-9]
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+# Scroll through workspaces with mod + scroll
+
+bindsym --whole-window $mod+button4 workspace prev
+bindsym --whole-window $mod+button5 workspace next
+
+floating_modifier $mod normal
+
+# Resize with mod + Shift + arrows
+bindsym $mod+Shift+Left resize shrink width 50px
+bindsym $mod+Shift+Right resize grow width 50px
+bindsym $mod+Shift+Up resize shrink height 50px
+bindsym $mod+Shift+Down resize grow height 50px
+
+# Move window between splits using mod + Ctrl + arrows
+bindsym $mod+Ctrl+Left move left
+bindsym $mod+Ctrl+Right move right
+bindsym $mod+Ctrl+Up move up
+bindsym $mod+Ctrl+Down move down
+
+# Laptop multimedia keys for volume and LCD brightness
+bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindsym XF86MonBrightnessUp exec brightnessctl -e4 -n2 set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl -e4 -n2 set 5%-
+
+bindsym --release XF86AudioNext exec playerctl next
+bindsym --release XF86AudioPause exec playerctl play-pause
+bindsym --release XF86AudioPlay exec playerctl play-pause
+bindsym --release XF86AudioPrev exec playerctl previous
+
+##############################
+### WINDOWS AND WORKSPACES ###
+##############################
+
+
+# Kitty
+for_window [app_id="kitty"] opacity 0.85
+
+# Vesktop
+for_window [app_id="vesktop"] opacity 0.85
+
+# Spotify
+for_window [app_id="spotify"] opacity 0.85
+
+# Firefox
+for_window [app_id="Firefox"] opacity 0.85
+
+# Steam
+for_window [app_id="steam"] opacity 0.85
+
+# Zed
+for_window [app_id="dev.zed.Zed"] opacity 0.85
+
+# Nemo
+for_window [app_id="nemo"] opacity 0.85
+
