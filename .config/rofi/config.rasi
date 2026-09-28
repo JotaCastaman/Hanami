@@ -4,9 +4,9 @@
     g-margin: 0;
     b-color: rgba(20, 20, 20, 0.5);
     fg-color: #ccc2bd;
-    fgp-color: #888888FF;
-    b-radius: 10px;
-    g-padding: 8px;
+    fgp-color: #4f4846;
+    b-radius: 0px;
+    g-padding: 6px;
     hl-color: #3b332f;
     hlt-color: rgba(204, 194, 189, 1);
     alt-color: rgba(20, 20, 20, 0.5);
@@ -34,7 +34,12 @@ listview {
 
 window {
     transparency: "real";
-    width: 450px;
+    location: northwest;
+    anchor: northwest;
+    x-offset: 15px;
+    y-offset: 6px;
+    width: 320px;
+    height: 490px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
@@ -52,7 +57,7 @@ inputbar {
 }
 
 entry {
-    placeholder: "Search Apps";
+    placeholder: "Search Apps...";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
