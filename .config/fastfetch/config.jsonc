@@ -30,7 +30,7 @@
         },
         {
             "type": "packages",
-            "format": "{} (xbps)",
+            "format": "{xbps} (xbps)",
             "key": " ",
             "keyColor": "33",  
         },
