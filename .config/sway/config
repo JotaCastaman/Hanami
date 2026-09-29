@@ -46,10 +46,10 @@ gaps inner 5
 gaps outer 5
 
 
-default_border pixel 0
-default_floating_border pixel 0
+default_border pixel 2
+default_floating_border pixel 2
 
-client.focused   #fdfafb #1c1b20 #fdfafb #fdfafb #fdfafb
+client.focused   #ccc2bd #1c1b20 #fdfafb #ccc2bd #ccc2bd
 client.unfocused #1c1b20 #1c1b20 #fdfafb #1c1b20 #1c1b20
 
 blur enable
