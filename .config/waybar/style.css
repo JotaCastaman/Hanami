@@ -48,7 +48,7 @@ window#waybar {
 #mode,
 #custom-power {
 	font-weight: bold;
-    padding: 0 5px 0 2px;
+  padding: 0 2px 0 5px;
 }
 #custom-cava {
 	padding: 0 0 0 10px;
@@ -76,4 +76,9 @@ window#waybar {
 }
 #custom-void {
   padding: 0 10px 0 0;
+}
+#custom-gpu-usage { 
+  padding: 0 5px;
+  margin: 0 2px;
+  font-weight: bold;
 }

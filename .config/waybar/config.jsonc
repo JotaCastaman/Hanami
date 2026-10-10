@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/void", "sway/workspaces", "custom/cava", "custom/mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/power", "tray"],
+    "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/gpu-usage", "custom/power", "tray"],
 
       "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -84,6 +84,11 @@
         "return-type": "json",
         "tail": true,
         "on-click": "playerctl --player=spotify play-pause"
+    },
+      "custom/gpu-usage": {
+        "format": "󰢮  {}%",
+        "exec": "cat /sys/class/drm/card0/device/gpu_busy_percent",
+        "interval": 2
     },
       "custom/void": {
         "format": " ",
