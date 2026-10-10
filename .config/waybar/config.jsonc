@@ -1,5 +1,6 @@
 {
-    "margin-top": 6,
+    "position": "bottom",
+    "margin-bottom": 5,
     "margin-left": 5,
     "margin-right": 5,
     "height": 28,

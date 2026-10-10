@@ -36,8 +36,8 @@ window {
     transparency: "real";
     location: northwest;
     anchor: northwest;
-    x-offset: 15px;
-    y-offset: 6px;
+    x-offset: 10px;
+    y-offset: 550px;
     width: 320px;
     height: 490px;
     border-radius: @b-radius;
