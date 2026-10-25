@@ -61,8 +61,8 @@
         "on-click": "kitty -e btop"
     },
 	  "custom/language": {
-	    "exec": "/home/jotacastaman/.config/waybar/scripts/language.sh",
-        "tail": true
+	    "exec": "/home/jotacastaman/.config/waybar/bin/waybar-mods language hangsheng",
+        "restart-interval": 5
     },
 	  "custom/ethernet": {
 	      "exec": "/home/jotacastaman/.config/waybar/scripts/ethernet.sh",
@@ -76,13 +76,13 @@
     },
       "custom/cava": {
     	  "format": "{}",
-    	  "exec": "/home/jotacastaman/.config/waybar/scripts/cava.sh",
-    	  "trail": true
+    	  "exec": "/home/jotacastaman/.config/waybar/bin/waybar-mods cava",
+    	  "restart-interval": 5
     },
       "custom/mpris": {
-        "exec": "/home/jotacastaman/.config/waybar/scripts/mpris-scroll.sh",
+        "exec": "/home/jotacastaman/.config/waybar/bin/waybar-mods mpris spotify",
         "return-type": "json",
-        "tail": true,
+        "restart-interval": 5,
         "on-click": "playerctl --player=spotify play-pause"
     },
       "custom/gpu-usage": {
