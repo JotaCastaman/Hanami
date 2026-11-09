@@ -3,3 +3,4 @@ target/
 
 # Compiled binary
 .config/waybar/bin/
+.config/fish/fish_variables
