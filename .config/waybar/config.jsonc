@@ -43,13 +43,13 @@
     },	
       "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-muted": "0% {icon} ",
+        "format-muted": "{icon}  0%",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "default": ["", "", ""]
             },
-        "on-click": "pavucontrol"
+        "on-click": "pkill volume-flyout || /home/jotacastaman/.config/waybar/volume-flyout/target/release/volume-flyout"
     },
 	  "cpu": {
 		    "format": "  {usage}%",
