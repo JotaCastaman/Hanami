@@ -1,0 +1,75 @@
+window {
+    background-color: rgba(20, 20, 20, 0.5);
+    color: #ccc2bd;
+    border-radius: 0;
+    padding: 12px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 11pt;
+}
+
+label {
+    color: #ccc2bd;
+}
+
+/* Remove the theme's blue focus ring and any leftover shadows */
+*:focus,
+*:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+scale {
+    outline: none;
+    box-shadow: none;
+}
+
+scale trough {
+    background-color: #4f4846;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    min-height: 6px;
+}
+
+scale trough highlight {
+    background-color: #ccc2bd;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+scale trough slider {
+    background-color: #ccc2bd;
+    background-image: none;
+    border-radius: 0;
+    min-width: 10px;
+    min-height: 14px;
+    /* Override the theme's negative margins, which would push the slider's
+       size below zero. -4px vertically centers the 14px slider on the 6px trough. */
+    margin: -4px 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button {
+    background: transparent;
+    background-image: none;
+    color: #ccc2bd;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 6px;
+}
+
+button:hover {
+    background-color: #3b332f;
+    color: #ccc2bd;
+}
+
+window.catcher {
+    background-color: transparent;
+    padding: 0;
+}
