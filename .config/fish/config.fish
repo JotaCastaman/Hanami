@@ -1,13 +1,22 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    alias ls='ls --color=auto'
-    alias pipes.sh='pipes.sh -c 7'
-    alias matrix='unimatrix -c white -s 96 -l o'
-    alias clock='tty-clock -c 7'
-    alias bonsai='cbonsai -l -s 2'
-    alias fastfetch='fastfetch --kitty-direct /home/jotacastaman/fastfetchicon/03.png --logo-width "22" --logo-height "12"'
+set -g fish_greeting
 
-    set -gx PATH $HOME/.local/bin $PATH
+starship init fish | source
 
-    eval "$(starship init fish)"
+# fastfetch
+function fastfetch
+    command fastfetch --kitty-direct /home/jotacastaman/Pictures/fastfetchicons/03 --logo-width 25 --logo-height 14 $argv
+end
+
+# tty-clock
+function clock
+    command tty-clock -c -t
+end
+
+# Poweroff and Restart
+function poweroff
+    command sudo poweroff
+end
+
+function reboot
+    command sudo reboot
 end
