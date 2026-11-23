@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/void", "sway/workspaces", "custom/cava", "custom/mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/gpu-usage", "custom/power", "tray"],
+    "modules-right": ["custom/language", "custom/ethernet", "pulseaudio", "memory", "cpu", "custom/power", "tray"],
 
       "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -57,7 +57,7 @@
 	  },
       "memory": {
         "interval": 5,
-        "format": "  {used}GiB / {total}GiB ({percentage}%)",
+        "format": "  {used:0.2f}GiB / {total:0.2f}GiB ({percentage}%)",
         "on-click": "kitty -e btop"
     },
 	  "custom/language": {
@@ -84,11 +84,6 @@
         "return-type": "json",
         "restart-interval": 5,
         "on-click": "playerctl --player=spotify play-pause"
-    },
-      "custom/gpu-usage": {
-        "format": "󰢮  {}%",
-        "exec": "cat /sys/class/drm/card0/device/gpu_busy_percent",
-        "interval": 2
     },
       "custom/void": {
         "format": " ",
